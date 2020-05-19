@@ -42,9 +42,53 @@
          background-color: #ff0;
          .item_box{
             width: 100%;
-            height: 346px;
+            height: calc(100% - 66px - 410px);
             background-color: #f0f;
             margin: 0 0 66px;
+            & > div{
+               float: left;
+            }
+            .title_box{
+               width: 297px;
+               height: 100%;
+               background-color: #fff;
+               h3{
+                  font-size: 48px;
+               }
+            }
+            .item_swiper{
+               width: calc(100% - 297px);
+               height: 100%;
+               .swiper-wrapper{
+                  width: 100%;
+                  height: 100%;
+                  .swiper-slide{
+                     width: 254px;
+                     height: 100%;
+                     a{
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        .item_info{
+                           h4{
+                              font-size: 22px;
+                           }
+                           div{
+                              font-size: 21px;
+                              span{
+
+                              }
+                           }
+                        }
+                     }
+                  }
+               }
+            }
+         }
+         .item_box::after{
+            display: block;
+            content: " ";
+            clear: both;
          }
          .story_box{
             width: 100%;

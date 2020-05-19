@@ -144,11 +144,11 @@ select::-ms-expand, input::-ms-expand, button::-ms-expand, textarea::-ms-expand 
 
 html, body { font-family: "Lato", "Noto Sans KR", AppleGothic, Arial, Helvetica, sans-serif; font-size: 20px; font-weight: 300; color: #1e1e1e; word-break: keep-all; line-height: 1; letter-spacing: 0; -webkit-font-smoothing: antialiased; }
 
-strong, h1, h2, h3, h4, h5, h6 { font-weight: 800; }
+strong, h1, h2, h3, h4, h5, h6 { font-weight: 700; }
 
 label, button { cursor: pointer; }
 
-header { width: 100%; height: 140px; display: flex; padding: 0 50px; align-items: center; background-color: #fff; position: fixed; z-index: 99; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+header { opacity: 0.5; width: 100%; height: 140px; display: flex; padding: 0 50px; align-items: center; background-color: #fff; position: fixed; z-index: 99; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
 
 header #logo { width: 247px; height: 74px; display: inline-block; float: left; }
 
@@ -223,7 +223,27 @@ header > div.donate_btn { float: right; }
 
 #fullpage .con3 .box { width: 100%; height: 100%; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; padding: 0 0 0 12%; background-color: #ff0; }
 
-#fullpage .con3 .box .item_box { width: 100%; height: 346px; background-color: #f0f; margin: 0 0 66px; }
+#fullpage .con3 .box .item_box { width: 100%; height: calc(100% - 66px - 410px); background-color: #f0f; margin: 0 0 66px; }
+
+#fullpage .con3 .box .item_box > div { float: left; }
+
+#fullpage .con3 .box .item_box .title_box { width: 297px; height: 100%; background-color: #fff; }
+
+#fullpage .con3 .box .item_box .title_box h3 { font-size: 48px; }
+
+#fullpage .con3 .box .item_box .item_swiper { width: calc(100% - 297px); height: 100%; }
+
+#fullpage .con3 .box .item_box .item_swiper .swiper-wrapper { width: 100%; height: 100%; }
+
+#fullpage .con3 .box .item_box .item_swiper .swiper-wrapper .swiper-slide { width: 254px; height: 100%; }
+
+#fullpage .con3 .box .item_box .item_swiper .swiper-wrapper .swiper-slide a { display: block; width: 100%; height: 100%; }
+
+#fullpage .con3 .box .item_box .item_swiper .swiper-wrapper .swiper-slide a .item_info h4 { font-size: 22px; }
+
+#fullpage .con3 .box .item_box .item_swiper .swiper-wrapper .swiper-slide a .item_info div { font-size: 21px; }
+
+#fullpage .con3 .box .item_box::after { display: block; content: " "; clear: both; }
 
 #fullpage .con3 .box .story_box { width: 100%; height: 410px; background-color: #00f; }
 
