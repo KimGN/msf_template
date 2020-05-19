@@ -1,34 +1,58 @@
 @charset "UTF-8";
-#container {
-   width:100%; background-color:#eee;
-   & > section {
-      width:100%; height:800px;
-   }
-   #slideSection {
-      height:840px;
-      box-sizing:border-box;
-      .slide01 {
-         width:100%; height:420px; background-color:#f9dd91;
-      }
-      .slide02 {
-         width:100%; height:420px; padding:0 0 0 150px; background-color:#cc6e65;
-         @include boxSizing;
-         .slide_container {
-            width:100%; background-color:#ccc;
-            ul {
-               &:after {
-                  @extend %clearfix;
-               }
-               li {
-                  width:200px; height:200px; background-color:#221567;
-                  float:left; margin:0 0 0 20px; cursor:pointer; color:#fff;
-                  &:first-child { width:600px; height:400px; }
-               }
-            }
+
+#fullpage {
+   background-color:#eee;
+   #mainVisual {
+      padding:140px 50px 0;
+      .container {
+         width:100%; height:100%;
+         position:relative;
+         left:50%; top:50%; transform:translate(-50%,-50%);
+         background-color:#ccc;
+         .left_box {
+            width:61.0%; height:100%;
+            float:left;
+            background-color:#cc6f8a;
+         }
+         .right_box {
+            width:37.3%; height:100%;
+            float:left;
+            margin:0 0 0 1.7%;
+            background-color:#ccb881;
          }
       }
    }
-   .slide03 {
-      background-color:#ccc; height:350px;
+
+
+
+//   KGN  section3
+   .box_{
+      @include boxSizing;
+      background-color: #aaa;
+      padding: 140px 0 0;
+      width: 100%;
+      height: 100%;
+   }
+   .con3{
+      .box{
+         width: 100%;
+         height: 100%;
+         @include boxSizing;
+         padding: 0 0 0 12%;
+         background-color: #ff0;
+         .item_box{
+            width: 100%;
+            height: 346px;
+            background-color: #f0f;
+            margin: 0 0 66px;
+         }
+         .story_box{
+            width: 100%;
+            height: 410px;
+            background-color: #00f;
+         }
+      }
    }
 }
+
+

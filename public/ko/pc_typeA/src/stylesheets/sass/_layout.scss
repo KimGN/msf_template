@@ -3,6 +3,7 @@ header {
    width:100%;
    height:140px; display:flex; padding:0 50px;
    align-items:center; background-color:#fff;
+   position:fixed; z-index:99;
    @include boxSizing();
    @extend %clearfix;
    #logo { width:247px; height:74px; display:inline-block; float:left; }
@@ -21,7 +22,7 @@ header {
    & > div.donate_btn {float:right;}
 }
 /* footer */
-footer {
+.footer {
    width:100%; background-color:#181b2e; letter-spacing:normal;
    & > div {
       .container {
