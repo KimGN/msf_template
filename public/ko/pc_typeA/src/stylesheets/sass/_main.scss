@@ -1,14 +1,12 @@
 @charset "UTF-8";
 
 #fullpage {
-   background-color:#eee;
    #mainVisual {
       padding:140px 50px 0;
       .container {
-         width:100%; height:100%;
-         position:relative;
-         left:50%; top:50%; transform:translate(-50%,-50%);
-         background-color:#ccc;
+         width:100%; height:100%; padding:140px 50px 100px;
+         @include boxSizing;
+         @extend %clearfix;
          .left_box {
             width:61.0%; height:100%;
             float:left;
@@ -20,63 +18,123 @@
             margin:0 0 0 1.7%;
             background-color:#ccb881;
          }
+
+
       }
    }
-
-
-
-//   KGN  section3
-   .box_{
-      @include boxSizing;
-      background-color: #aaa;
-      padding: 140px 0 0;
-      width: 100%;
-      height: 100%;
-   }
+   //   KGN  section3
    .con3{
-      .box{
+      .container {
          width: 100%;
          height: 100%;
+         padding: 140px 0 0;
          @include boxSizing;
-         padding: 0 0 0 12%;
-         background-color: #ff0;
-         .item_box{
+         @extend %clearfix;
+         .box{
             width: 100%;
-            height: calc(100% - 66px - 410px);
-            background-color: #f0f;
-            margin: 0 0 66px;
-            & > div{
-               float: left;
-            }
-            .title_box{
-               width: 297px;
-               height: 100%;
-               background-color: #fff;
-               h3{
-                  font-size: 48px;
+            height: 100%;
+            @include boxSizing;
+            padding: 0 0 0 12%;
+            .item_box{
+               width: 100%;
+               height: calc(100% - 66px - 410px);
+               margin: 0 0 66px;
+               @extend %clearfix;
+               & > div{
+                  float: left;
                }
-            }
-            .item_swiper{
-               width: calc(100% - 297px);
-               height: 100%;
-               .swiper-wrapper{
-                  width: 100%;
+               .title_box{
+                  position: relative;
+                  width: 297px;
                   height: 100%;
-                  .swiper-slide{
-                     width: 254px;
+                  background: url("../../images/main/logo95.jpg") 0 22px no-repeat;
+                  h3{
+                     font-weight: $bold;
+                     font-size: 48px;
+                     letter-spacing: -5px;
+                     line-height: 1.2;
+                     padding: 127px 0 0;
+                  }
+                  .btn_box{
+                     position: absolute;
+                     left: 0;
+                     bottom: 0;
+                     width: 106px;
+                     height: 48px;
+                     .next_btn , .prev_btn{
+                        position: absolute;
+                        top:0;
+                        @include boxSizing;
+                        width: 48px;
+                        height: 48px;
+                        border: 1px solid #c3c5c7;
+                        border-radius: 24px;
+                        div{
+                           position: absolute;
+                           top:50%;
+                           left: 50%;
+                           transform: translate(-50% , -50%);
+                           width: 8px;
+                           height: 8px;
+                           font-size: 0;
+                           border-top:2px solid #000;
+                           border-left:2px solid #000;
+                        }
+                     }
+                     .next_btn{
+                        right:0;
+                        transform: rotate(135deg);
+                     }
+                     .prev_btn{
+                        left: 0;
+                        transform: rotate(-45deg);
+                     }
+                     .index_box{
+                        position: absolute;
+                        top:50%;
+                        right: -45px;
+                        transform: translate(0,-50%);
+                        span{
+                           font-weight: $medium;
+                           font-size: 16px;
+                        }
+                     }
+                  }
+               }
+               .item_swiper{
+                  width: calc(100% - 297px);
+                  height: 100%;
+                  .swiper-wrapper{
+                     width: 100%;
                      height: 100%;
-                     a{
-                        display: block;
-                        width: 100%;
+                     .swiper-slide{
+                        width: 254px;
                         height: 100%;
-                        .item_info{
-                           h4{
-                              font-size: 22px;
-                           }
-                           div{
-                              font-size: 21px;
-                              span{
-
+                        background-color: #f8f9fa;
+                        a{
+                           position: relative;
+                           display: block;
+                           width: 100%;
+                           height: 100%;
+                           text-align: center;
+                           .item_info{
+                              position: absolute;
+                              left: 0;
+                              bottom:calc(100% - 270px);
+                              width: 100%;
+                              h4{
+                                 font-size: 22px;
+                                 font-weight: $medium;
+                                 margin: 0 0 10px;
+                              }
+                              div{
+                                 font-size: 21px;
+                                 font-weight: $medium;
+                                 color: $rad;
+                                 span{
+                                    font-weight: $bold;
+                                    color: $rad;
+                                 }
                               }
                            }
                         }
@@ -84,19 +142,18 @@
                   }
                }
             }
-         }
-         .item_box::after{
-            display: block;
-            content: " ";
-            clear: both;
-         }
-         .story_box{
-            width: 100%;
-            height: 410px;
-            background-color: #00f;
+            .story_box{
+               width: 100%;
+               height: 410px;
+               background-color: #00f;
+            }
          }
       }
+
    }
+
+
+
 }
 
 

@@ -6,9 +6,27 @@ function main() {
         menu: '#myMenu'
     });
 
+
+    var $speed = 500;
+
     var swiper_item = new Swiper('.swiper-container.item_swiper', {
-        slidesPerView: 5.2,
-        spaceBetween: 10
+        slidesPerView: 5.4,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: '.next_btn',
+            prevEl: '.prev_btn',
+        },
+        loop : true,
+        speed: $speed,
+        on:{
+            init:function(){
+                
+            },
+            slideChange:function(){
+                console.log(this.realIndex);
+            }
+        }
+
     });
 
 
