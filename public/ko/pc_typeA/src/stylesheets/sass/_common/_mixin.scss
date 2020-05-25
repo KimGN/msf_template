@@ -214,26 +214,26 @@
    }
 }
 // Break Point (Desktop First 기준 내림차순 설정)
-$desktop-s-width:1650px;
-$tablet-width:1320px;
-$mob-width:750px;
-// PC large
-@mixin pc-small {
-   @media screen and (max-width:#{$desktop-s-width}) {
+$desktop-a-width:1600px;
+$desktop-b-width:1440px;
+$desktop-c-width:1280px;
+// 1600
+@mixin pc-a {
+   @media screen and (max-width:#{$desktop-a-width}) {
       @content;
    }
 }
 // --------------------------------------------------
-// 태블릿
-@mixin tab {
-   @media screen and (max-width:#{$tablet-width}) {
+// 1440
+@mixin pc-b {
+   @media screen and (max-width:#{$desktop-b-width}) {
       @content;
    }
 }
 // --------------------------------------------------
-// 모바일
-@mixin mob {
-   @media screen and (max-width:#{$mob-width}) {
+// 1280
+@mixin pc-c {
+   @media screen and (max-width:#{$desktop-c-width}) {
       @content;
    }
 }

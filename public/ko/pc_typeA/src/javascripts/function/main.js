@@ -10,17 +10,16 @@ function main() {
     var $speed = 500;
 
     var swiper_item = new Swiper('.swiper-container.item_swiper', {
-        slidesPerView: 5.4,
-        spaceBetween: 10,
+        slidesPerView: "auto",
         navigation: {
-            nextEl: '.next_btn',
-            prevEl: '.prev_btn',
+            nextEl: '.next_btn.item_btn',
+            prevEl: '.prev_btn.item_btn',
         },
         loop : true,
         speed: $speed,
         on:{
             init:function(){
-                
+
             },
             slideChange:function(){
                 console.log(this.realIndex);
@@ -29,7 +28,24 @@ function main() {
 
     });
 
+    var swiper_story = new Swiper('.swiper-container.story_swiper', {
+        slidesPerView: "auto",
+        navigation: {
+            nextEl: '.next_btn.story_btn',
+            prevEl: '.prev_btn.story_btn',
+        },
+        loop : true,
+        speed: $speed,
+        on:{
+            init:function(){
 
+            },
+            slideChange:function(){
+                console.log(this.realIndex);
+            }
+        }
+
+    });
 
 
 

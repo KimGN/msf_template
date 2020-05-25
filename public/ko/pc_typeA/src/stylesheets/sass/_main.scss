@@ -27,7 +27,7 @@
       .container {
          width: 100%;
          height: 100%;
-         padding: 140px 0 0;
+         padding: 120px 0 0;
          @include boxSizing;
          @extend %clearfix;
          .box{
@@ -37,7 +37,7 @@
             padding: 0 0 0 12%;
             .item_box{
                width: 100%;
-               height: calc(100% - 66px - 410px);
+               height: 340px;
                margin: 0 0 66px;
                @extend %clearfix;
                & > div{
@@ -111,6 +111,7 @@
                         width: 254px;
                         height: 100%;
                         background-color: #f8f9fa;
+                        margin:0 10px 0 0;
                         a{
                            position: relative;
                            display: block;
@@ -120,7 +121,7 @@
                            .item_info{
                               position: absolute;
                               left: 0;
-                              bottom:calc(100% - 270px);
+                              bottom:40px;
                               width: 100%;
                               h4{
                                  font-size: 22px;
@@ -143,9 +144,121 @@
                }
             }
             .story_box{
+               @extend %clearfix;
                width: 100%;
                height: 410px;
-               background-color: #00f;
+               .story_txt{
+                  float: left;
+                  width: 42.3%;
+                  height: 100%;
+                  margin:0 4.9% 0 0;
+                  background-color: #666;
+                  overflow: hidden;
+                  border-radius: 40px;
+                  @include boxSizing;
+                  padding:  100px 0 0 53px;
+                  color: #fff;
+                  .txt_head{
+                     position: relative;
+                     height: 25px;
+                     margin:0 0 15px;
+                     h4{
+                        font-size: 22px;
+                        letter-spacing: -2px;
+                     }
+                  }
+                  .txt_title{
+                     position: relative;
+                     height: 90px;
+                     margin: 0 0 40px;
+                     h3{
+                        line-height: 1.3;
+                        font-size: 35px;
+                        letter-spacing: -2px;
+                     }
+                  }
+                  .txt_body{
+                     p{
+                        font-size: 17px;
+                     }
+                  }
+               }
+               .story_slide{
+                  float: left;
+                  width: 52.8%;
+                  height: 100%;
+                  .swiper-slide{
+                     background-color: #ff0;
+                     width: 144px;
+                     height: 192px;
+                     overflow: hidden;
+                     border-radius: 15px;
+                     margin: 0 66px 0 0;
+                  }
+                  .txt_box{
+                     @include boxSizing;
+                     @extend %clearfix;
+                        padding: 5% 0 0;
+                     .title_box{
+                        float: left;
+                        width: 207px;
+                        .txt_title{
+                           margin:0 0 10% ;
+                           h3{
+                              font-size: 32px;
+                              font-weight:$bold;
+                              color: $rad;
+                           }
+                        }
+                     }
+                     .slide_txt{
+                        float: left;
+                        width: calc(100% - 207px);
+                        line-height: 1.4;
+                        p{
+                           font-size: 15px;
+                           font-weight: $regular;
+                           margin: 0 0 2.5%;
+                        }
+                        span{
+                           font-size: 15px;
+                           font-weight: $regular;
+                        }
+                     }
+                  }
+               }
+            }
+            .btn_box{
+               position: relative;
+               width: 106px;
+               height: 48px;
+               .next_btn , .prev_btn{
+                  position: absolute;
+                  @include boxSizing;
+                  width: 48px;
+                  height: 48px;
+                  border: 1px solid #c3c5c7;
+                  border-radius: 24px;
+                  div{
+                     position: absolute;
+                     top:50%;
+                     left: 50%;
+                     transform: translate(-50% , -50%);
+                     width: 8px;
+                     height: 8px;
+                     font-size: 0;
+                     border-top:2px solid #000;
+                     border-left:2px solid #000;
+                  }
+               }
+               .next_btn{
+                  right:0;
+                  transform: rotate(135deg);
+               }
+               .prev_btn{
+                  left: 0;
+                  transform: rotate(-45deg);
+               }
             }
          }
       }
