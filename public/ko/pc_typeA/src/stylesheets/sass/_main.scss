@@ -92,7 +92,7 @@
                      .index_box{
                         position: absolute;
                         top:50%;
-                        right: -45px;
+                        right: -55px;
                         transform: translate(0,-50%);
                         span{
                            font-weight: $medium;
@@ -149,6 +149,7 @@
                height: 410px;
                .story_txt{
                   float: left;
+                  position: relative;
                   width: 42.3%;
                   height: 100%;
                   margin:0 4.9% 0 0;
@@ -156,32 +157,78 @@
                   overflow: hidden;
                   border-radius: 40px;
                   @include boxSizing;
-                  padding:  100px 0 0 53px;
+                  padding:  95px 0 0 53px;
                   color: #fff;
-                  .txt_head{
-                     position: relative;
-                     height: 25px;
-                     margin:0 0 15px;
-                     h4{
-                        font-size: 22px;
-                        letter-spacing: -2px;
+                  text-shadow:#000 1px 0 5px; ;
+                  .txt_bg{
+                     position: absolute;
+                     top:0;
+                     left: 0;
+                     width: 100%;
+                     height: 100%;
+                     ul{
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        li{
+                           position: absolute;
+                           top:0;
+                           left: 0;
+                           width: 100%;
+                           height: 100%;
+                           .text_box{
+                              position: absolute;
+                              top:95px;
+                              left: 45px;
+                              z-index: 1;
+                              .text_label{
+                                 position: relative;
+                                 display: inline-block;
+                                 width: auto;
+                                 margin:0 0 15px;
+                                 padding: 0 3px;
+                                 h4{
+                                    position: relative;
+                                    z-index: 1;
+                                    font-size: 18px;
+                                    letter-spacing: -2px;
+                                 }
+                              }
+                              .text_label::after{
+                                 position: absolute;
+                                 display: block;
+                                 left: 0;
+                                 bottom:-3px;
+                                 width: 100%;
+                                 height: 5px;
+                                 background-color: #f70707;
+                                 content: " ";
+                              }
+                              h3{
+                                 font-size: 29px;
+                                 letter-spacing: -2px;
+                                 line-height: 1.3;
+                                 margin:0 0 40px;
+                              }
+                              p{
+                                 font-size: 14px;
+                              }
+                           }
+                           img  {
+                              position: absolute;
+                              top:50%;
+                              left: 50%;
+                              transform: translate(-50%,-50%);
+                              height: 100%;
+                           }
+                        }
+                        li.active{
+                           z-index: 5;
+                        }
+
                      }
                   }
-                  .txt_title{
-                     position: relative;
-                     height: 90px;
-                     margin: 0 0 40px;
-                     h3{
-                        line-height: 1.3;
-                        font-size: 35px;
-                        letter-spacing: -2px;
-                     }
-                  }
-                  .txt_body{
-                     p{
-                        font-size: 17px;
-                     }
-                  }
+
                }
                .story_slide{
                   float: left;
@@ -203,8 +250,15 @@
                         float: left;
                         width: 207px;
                         .txt_title{
+                           position: relative;
+                           height: 40px;
+                           overflow: hidden;
                            margin:0 0 10% ;
+                           letter-spacing: -2px;
                            h3{
+                              position: absolute;
+                              top:5px;
+                              left: 0;
                               font-size: 32px;
                               font-weight:$bold;
                               color: $rad;
@@ -212,17 +266,26 @@
                         }
                      }
                      .slide_txt{
+                        position: relative;
                         float: left;
                         width: calc(100% - 207px);
                         line-height: 1.4;
-                        p{
-                           font-size: 15px;
-                           font-weight: $regular;
-                           margin: 0 0 2.5%;
+                        div{
+                           position: absolute;
+                           top:0;
+                           left: 0;
+                           p{
+                              font-size: 15px;
+                              font-weight: $regular;
+                              margin: 0 0 2.5%;
+                           }
+                           span{
+                              font-size: 15px;
+                              font-weight: $regular;
+                           }   
                         }
-                        span{
-                           font-size: 15px;
-                           font-weight: $regular;
+                        div.active{
+                           z-index: 5;
                         }
                      }
                   }
