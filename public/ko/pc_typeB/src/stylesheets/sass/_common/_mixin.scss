@@ -214,26 +214,12 @@
    }
 }
 // Break Point (Desktop First 기준 내림차순 설정)
-$desktop-a-width:1600px;
-$desktop-b-width:1440px;
-$desktop-c-width:1280px;
-// 1600
-@mixin pc-a {
-   @media screen and (max-width:#{$desktop-a-width}) {
-      @content;
-   }
-}
+$tablet-width:700px;
+
 // --------------------------------------------------
-// 1440
-@mixin pc-b {
-   @media screen and (max-width:#{$desktop-b-width}) {
-      @content;
-   }
-}
-// --------------------------------------------------
-// 1280
-@mixin pc-c {
-   @media screen and (max-width:#{$desktop-c-width}) {
+// 700
+@mixin tablet{
+   @media screen and (min-width:#{$tablet-width}) {
       @content;
    }
 }

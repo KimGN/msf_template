@@ -38,6 +38,33 @@ header {
    }
 }
 .donate_btn {
-   a {width:132px; padding:13px 0; display:inline-block; background-color:$red; color:#fff; font-size:13px; border-radius:70px; text-align:center; }
+   a {width:132px; padding:13px 0; display:inline-block; background-color:$red; color:#fff; font-size:13px; border-radius:70px; text-align:center; font-weight: $medium;letter-spacing: -1px;}
 }
 
+@include tablet(){
+   header {
+      max-width: 750px;
+      left: 50%;
+      transform: translate(-50% , 0);
+      height:120px; display:block; padding:20px 40px 0 32px;
+      @include boxSizing();
+      #logo {
+         width:252px;
+      }
+
+   }
+   /* footer */
+   .footer {
+      font-size: 24px;
+      padding: 40px 0;
+      span{
+         margin: 0 4px;
+      }
+   }
+   .donate_btn {
+      a {
+         width:264px; padding:26px 0;
+         font-size:26px; border-radius:140px;
+      }
+   }
+}
